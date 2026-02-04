@@ -1,0 +1,17 @@
+<form method="POST">
+<input name="topic" placeholder="Enter topic" class="form-control">
+<br>
+<button class="btn btn-primary">Generate</button>
+</form>
+
+{% if image %}
+<img src="{{ image }}" width="600">
+{% endif %}
+
+<hr>
+
+<h4>Saved Maps</h4>
+
+{% for m in maps %}
+<p>{{ m.topic }} - {{ m.created }}</p>
+{% endfor %}
